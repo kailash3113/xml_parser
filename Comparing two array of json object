@@ -1,0 +1,22 @@
+json_1 = { "b": 2, "a": 1, "c":"e"}
+  
+json_2 = { "b": 2, "c":"e", "a": 1}
+
+def json_object_comparing(json_1,json_2):
+
+  json_dump1 = json.dumps(json_1)
+
+  json_dump2 = json.dumps(json_2)
+
+  json_load1 =  json.loads(json_dump1)   
+  
+  json_load2 = json.loads(json_dump2)
+
+  if(sorted(json_load1.items()) == sorted(json_load2.items())):
+
+    print("The arrays are equal")
+
+  else:
+    print("The array is not equal")
+
+json_object_comparing(json_1,json_2)
